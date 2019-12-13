@@ -28,6 +28,7 @@ window.onload = function () {
             }
 
             customOption.classList.add('custom-select-option-active');
+            customSelect.classList.toggle('custom-select-active');
             customOptions.classList.toggle('custom-select-options-open');
             customSelectLabel.innerText = customOption.innerText;
             boringSelect.value = customOption.dataset.value;
@@ -41,6 +42,13 @@ window.onload = function () {
     boringSelect.parentElement.insertBefore(customSelect, boringSelect);
 
     customSelect.addEventListener('click', function(event) {
+        customSelect.classList.toggle('custom-select-active');
         customOptions.classList.toggle('custom-select-options-open');
+        event.stopPropagation();
+    })
+
+    document.addEventListener('click', function() {
+        customSelect.classList.remove('custom-select-active');
+        customOptions.classList.remove('custom-select-options-open');
     })
 }
