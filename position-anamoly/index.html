@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0">
+    <title>Accordian</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="index.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans:400,500,700&display=swap" rel="stylesheet">
+
+<style>
+    .parent-content-box{
+        width: 400px;
+        height: 400px;
+        padding: 10px;
+        border: 50px solid red;
+        background-color: dodgerblue;
+        position: relative;
+        box-sizing: content-box; /* No problem */
+    }
+
+    .parent-border-box{
+        width: 400px;
+        height: 400px;
+        padding: 10px;
+        border: 50px solid red;
+        background-color: dodgerblue;
+        position: relative;
+        box-sizing: border-box; /* Problem */
+    }
+
+    .child{
+        width: 100px;
+        height: 100px;
+        background-color: yellow;
+        box-sizing: content-box;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
+</style>
+</head>
+
+<body>
+    <hr>Positioning inside Content Box: Normal<br>
+    <div class="parent-content-box">
+        <div class="child"></div>
+    </div>
+    <hr>Positioning inside Border Box: Weird
+    <strong>Affected by border width</strong><br>
+    <div class="parent-border-box">
+        <div class="child"></div>
+    </div>
+</body>
+
+</html>

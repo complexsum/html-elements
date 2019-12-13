@@ -1,0 +1,90 @@
+.px-select{
+    display: none;
+}
+
+.custom-select{
+    display: block;
+    position: relative;
+    color: rgb(35, 35, 35);
+    background-color: hsl(210, 100%, 92%);
+    font-size: 12px;
+    font-family: 'Alegreya Sans', sans-serif;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 8px;
+    cursor: pointer;
+    user-select: none;
+    box-sizing: border-box;
+}
+
+.custom-select::after{
+    content: url(chevron-down-solid.svg);
+    float: right;
+    font-weight: normal;
+    font-style: normal;
+    width: 16px;
+    height: 16px;
+    color: rgb(35, 35, 35);
+    padding: 8px;
+}
+
+.custom-select-active::after{
+    content: url(chevron-up-solid.svg);
+    float: right;
+    font-weight: normal;
+    font-style: normal;
+    width: 16px;
+    height: 16px;
+    color: rgb(35, 35, 35);
+    padding: 8px;
+}
+
+.custom-select-label{
+    display: inline-block;
+    padding: 4px 8px;
+    height: 40px;
+    line-height: 32px;
+    box-sizing: border-box;
+    font-family: 'Alegreya Sans', sans-serif;
+    font-size: 16px;
+    color: rgb(35, 35, 35);
+}
+
+.custom-select-options{
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    opacity: 0;
+    visibility: hidden;
+    background-color: hsl(210, 100%, 92%);
+    font-family: inherit;
+    transition: all 200ms ease;
+    pointer-events: none;
+}
+
+.custom-select-options-open{
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+}
+
+.custom-select-option{
+    padding: 8px;
+    color: rgb(35, 35, 35);
+    font-size: 12px;
+    font-family: inherit;
+    cursor: pointer;
+    line-height: 24px;
+    border-bottom: 1px solid hsl(210, 100%, 82%);
+}
+
+.custom-select-option-active{
+    color: #fff;
+    background: dodgerblue;
+}
+
+.custom-select-option:hover{
+    background-color: hsl(210, 100%, 76%);
+}
