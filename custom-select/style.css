@@ -89,3 +89,17 @@
 .custom-select-option:hover{
     background-color: hsl(210, 100%, 76%);
 }
+
+select{
+    color: #fff;
+    background-color: dodgerblue;
+    outline: none;
+}
+
+option{
+    display: block;
+    color: #fff;
+    padding: 4px 8px;
+    font-size: 12px;
+    background-color: aquamarine;
+}
